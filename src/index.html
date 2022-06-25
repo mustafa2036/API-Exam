@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Exam</title>
+    <!-- Custom File bootstrap -->
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <!-- Custom File FontAwsome -->
+    <link rel="stylesheet" href="../styles/all.min.css">
+    <!-- Custom File Css Style -->
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    
+    <!-- Start Nav -->
+    <section>
+        <div class="nav-top-header">
+            <div class="strip-logo py-3">
+                <img src="../images/logo.png" class="logo" alt="">
+            </div>
+            <div class="strip-toggle-menu position-absolute">
+                <i class="fa-solid fa-bars" id="bars"></i>
+                <i class="fa-solid fa-xmark" id="Xmark"></i>
+            </div>
+            <div class="strip-icon">
+                <div class="strip-lang py-1">
+                    <span><i class="fas fa-globe"></i></span>
+                </div>
+                <div class="strip-share py-1">
+                    <span><i class="fas fa-share-alt"></i></span>
+                </div>
+            </div>
+        </div>
+        <div id="nav-header" class="nav-header open-menu">
+            <div class="nav-item">
+                <ul>
+                    <li class="item-1">
+                        <a href="#" id="nowPlaying">Now playing</a>
+                    </li>
+                    <li class="item-2">
+                        <a href="#" id="popular">Popular</a>
+                    </li>
+                    <li class="item-3">
+                        <a href="#" id="top-rated">Top Rated</a>
+                    </li>
+                    <li class="item-4">
+                        <a href="#" id="trand">Trending</a>
+                    </li>
+                    <li class="item-5">
+                        <a href="#" id="upcoming">Upcoming</a>
+                    </li>
+                    <li class="item-6">
+                        <a href="#" id="contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="soical-nav">
+                <a href="#" class="me-3"> <i class="fab fa-facebook-f"></i> </a>
+                <a href="#" class="me-3"> <i class="fab fa-twitter"></i> </a>
+                <a href="#" class="me-3"> <i class="fas fa-globe"></i> </a>
+                <div class="pt-3">
+                    <span class="text-white-50">Copyright Â© 2019 All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Nav -->
+
+    <!-- Start Now Playing -->
+    <section class="py-5">
+        <div class="container w-75">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" id="AllMovie" 
+                    class="form-control inputs" placeholder="get movies by word...">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="word" 
+                    class="form-control inputs" placeholder="search...">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Now Playing -->
+
+    <section class="py-4 text-center">
+		<div class="container">
+            <div class="row" id="res">
+            </div>
+        </div>
+	</section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="row">
+               
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <h2 class="text-light">ContactUs...</h2>
+            <div class="row">
+               <div class="col-md-6">
+                    <div class="form-groub my-3">
+                        <input type="text" placeholder="Enter Your Name" id="name" class="form-control">
+                        <div class="alert alert-danger d-none" id="alert-name">Your Name is not valid </div>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                    <div class="form-groub my-3">
+                        <input type="text" placeholder="Enter Email" id="email" class="form-control">
+                        <div class="alert alert-danger d-none" id="alert-email">enter Valid email </div>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                    <div class="form-groub my-3">
+                        <input type="text" placeholder="Enter Phone" id="phone" class="form-control">
+                        <div class="alert alert-danger d-none" id="alert-phone">enter Valid Phone</div>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                    <div class="form-groub my-3">
+                        <input onkeyup="validAge()" type="text" placeholder="Enter age" id="age" class="form-control">
+                        <div class="alert alert-danger d-none" id="alert-age">enter Valid age </div>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                    <div class="form-groub my-3">
+                        <input type="password" placeholder="Enter Password" id="password" class="form-control">
+                        <div class="alert alert-danger d-none" id="alert-password">
+                            entre valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+               </div>
+               <div class="col-md-6">
+                    <div class="form-groub my-3">
+                        <input type="password" placeholder="Enter password" id="repassword" class="form-control">
+                        <div class="alert alert-danger d-none" id="alert-repassword">
+                            entre valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+               </div>
+               <div class="col-md-12">
+                    <div class="form-groub mt-3 mb-5">
+                        <textarea style="height: 150px;" type="password" placeholder="Enter password" 
+                        id="textarea" class="form-control mb-3">
+                        </textarea>
+                        <span class="text-danger mt-4 py-3 fs-4" id="charSpan">200</span>
+                    </div>
+               </div>
+            </div>
+            <button class="btn btn-outline-danger" id="btnsubmit">Submit</button>
+        </div>
+    </section>
+
+
+
+    <!-- Custom File Bootstrap js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom File JQuery  -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- Custom File Js -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

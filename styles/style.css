@@ -1,0 +1,133 @@
+*{
+    padding: 0; margin: 0;
+    outline: none; box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --main-black:#000;
+    --main-white:#fff;
+    --main-red:#ff655c;
+    --border-color: #80bdff;
+}
+.form-control{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    color: var(--main-white);
+    border-radius: 0;
+    font-weight: 800;
+}
+.form-control:focus{
+    background-color: transparent;
+    border: var(--border-color);
+    color: #495057;
+    border-bottom: 1px solid rgba(255,255,255,.7)
+}
+body{
+    background-color: var(--main-black);
+}
+a{
+    text-decoration: none;
+}
+/* Start Nav */
+.nav-header{
+    background: var(--main-black);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 6666;
+    display: none;
+    transition: all .5s ease;
+}
+.nav-top-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-white);
+    height: 100vh;
+    width: 60px;
+    text-align: center;
+    z-index: 9999;
+}
+.nav-top-header .strip-logo img{
+    height: 48px;
+}
+.strip-toggle-menu{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.strip-toggle-menu i{
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+#Xmark{
+    display: none;
+}
+.strip-icon{
+    position: absolute;
+    bottom: 20px;
+    left: 53%;
+    transform: translate(-50%);
+}
+.strip-icon > div{
+    cursor: pointer;
+}
+.nav-item li{
+    padding-top: 300px;
+    opacity: 0;
+}
+.nav-item ul li a{
+    color: var(--main-white);
+    font-size: 1rem;
+    transition: color .5s;
+}
+.soical-nav{
+    position: absolute;
+    bottom: 20px;
+    left: 2rem;
+}
+.soical-nav a{
+    color: var(--main-white);
+    transition: color .5s;
+}
+.nav-item ul li a:hover, .soical-nav a:hover{
+    color: var(--main-red);
+}
+/* End Nav */
+.box-title{
+    overflow: hidden;
+    height: 434px;
+}
+.box-title img{
+    height: 436px;
+}
+.post-box{
+    top: 100%;
+    left: 0;
+    background-color: rgba(255,255,255,.7);
+    height: 100%;
+    color: var(--main-black);
+    transition: top .9s;
+}
+.box-title:hover .post-box{
+    top: 0;
+}
+.post-box p{
+    font-size: .9rem;
+}
+.post-box .info{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Media Queries */
+@media(max-width:991px){
+    .nav-top-header{
+        left: 23%;
+    }
+}
