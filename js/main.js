@@ -2,6 +2,7 @@
 let bars = $("#bars");
 let navHeader = $("#nav-header");
 let Xmark = $("#Xmark");
+let Landing = $("#landing");
 
 // aHref
 let nowPlaying  = $("#nowPlaying");
@@ -43,6 +44,15 @@ $(Xmark).click(() => {
         $(".nav-top-header").animate({'left': "0px"},500);
         $(bars).css("display", 'block');
         $(Xmark).css("display", "none");
+});
+
+// Start Landing
+$(document).ready(function () {
+    $(".loader").fadeOut(2000, () => {
+        $(Landing).slideUp(1000, () => {
+            $("body").css("overflow-y",'auto');
+        })
+    });
 });
 
 let arrData = [];
