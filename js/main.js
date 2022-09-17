@@ -48,8 +48,8 @@ $(Xmark).click(() => {
 
 // Start Landing
 $(document).ready(function () {
-    $(".loader").fadeOut(2000, () => {
-        $(Landing).slideUp(1000, () => {
+    $(".loader").fadeOut(3000, () => {
+        $(Landing).fadeOut(1000, () => {
             $("body").css("overflow-y",'auto');
         })
     });
@@ -74,9 +74,9 @@ function apiDate(){
             <div class="box-title position-relative">
                 <img src="https://image.tmdb.org/t/p/w500${arrData[i].backdrop_path}"" class="img-fluid" alt="">
                 <div class="boxs d-flex align-items-center">
-                    <div class="post-box text-center py-5 position-absolute">
-                        <h2 class="mb-3">${arrData[i].original_title}</h2>
-                        <p>${arrData[i].overview}</p>
+                    <div class="post-box text-center px-4 py-5 position-absolute">
+                        <h2 class="mb-3 fw-bold">${arrData[i].original_title}</h2>
+                        <p class='fw-bold text-muted'>${arrData[i].overview}</p>
                         <p class="my-3 info">${arrData[i].vote_average}</p>
                         <p class="my-2 info">${arrData[i].release_date}</p>
                     </div>
@@ -100,9 +100,9 @@ search_bar.addEventListener('keyup', () => {
                 <div class="box-title position-relative">
                     <img src="https://image.tmdb.org/t/p/w500${arrData[i].backdrop_path}"" class="img-fluid" alt="">
                     <div class="boxs d-flex align-items-center">
-                        <div class="post-box text-center py-5 position-absolute">
-                            <h2 class="mb-3"><span class="text-uppercase text-danger">${arrData[i].original_title}</span></h2>
-                            <p>${arrData[i].overview}</p>
+                        <div class="post-box text-center px-4 py-5 position-absolute">
+                            <h2 class="mb-3 fw-bold"><span class="text-uppercase text-danger">${arrData[i].original_title}</span></h2>
+                            <p class='fw-bold text-muted'>${arrData[i].overview}</p>
                             <p class="my-3 info">${arrData[i].vote_average}</p>
                             <p class="my-2 info">${arrData[i].release_date}</p>
                         </div>
@@ -125,9 +125,9 @@ word.addEventListener('keyup', () => {
                 <div class="box-title position-relative">
                     <img src="https://image.tmdb.org/t/p/w500${arrData[i].backdrop_path}"" class="img-fluid" alt="">
                     <div class="boxs d-flex align-items-center">
-                        <div class="post-box text-center py-5 position-absolute">
-                            <h2 class="mb-3">${arrData[i].original_title}</h2>
-                            <p><span class="text-primary">${arrData[i].overview}</span></p>
+                        <div class="post-box text-center px-4 py-5 position-absolute">
+                            <h2 class="mb-3 fw-bold">${arrData[i].original_title}</h2>
+                            <p class='fw-bold text-muted'><span class="text-primary">${arrData[i].overview}</span></p>
                             <p class="my-3 info">${arrData[i].vote_average}</p>
                             <p class="my-2 info">${arrData[i].release_date}</p>
                         </div>

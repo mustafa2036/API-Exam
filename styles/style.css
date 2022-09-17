@@ -13,6 +13,15 @@ body{
     --main-red:#ff655c;
     --border-color: #80bdff;
 }
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-red);
+}
+::-webkit-scrollbar-track{
+  background-color: var(--main-white);
+}
 .form-control{
     background-color: transparent;
     border: none;
@@ -121,10 +130,10 @@ a{
     top: 0;
 }
 .post-box p{
-    font-size: .9rem;
+    font-size: 1rem;
 }
 .post-box .info{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 /* Start Landing */
@@ -219,7 +228,7 @@ a{
 
 /* Media Queries */
 @media(max-width:991px){
-    .nav-top-header{
-        left: 23%;
-    }
+  .nav-top-header{
+    left: 0;
+  }
 }
